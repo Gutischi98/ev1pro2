@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:layout_marginBottom="617dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/restaurante_logo" />
+
+    <ImageView
+        android:id="@+id/imgCazuela"
+        android:layout_width="134dp"
+        android:layout_height="94dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="58dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logo"
+        app:srcCompat="@drawable/cazuela" />
+
+    <ImageView
+        android:id="@+id/imgChoclo"
+        android:layout_width="134dp"
+        android:layout_height="94dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="52dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgCazuela"
+        app:srcCompat="@drawable/pastel_de_choclo" />
+
+    <TextView
+        android:id="@+id/tvCazuela"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="56dp"
+        android:text="Cazuela"
+        app:layout_constraintStart_toEndOf="@+id/imgCazuela"
+        app:layout_constraintTop_toBottomOf="@+id/logo" />
+
+    <TextView
+        android:id="@+id/tvCantCazuela"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="13dp"
+        android:layout_marginTop="13dp"
+        android:text="Cant."
+        app:layout_constraintStart_toEndOf="@+id/imgCazuela"
+        app:layout_constraintTop_toBottomOf="@+id/tvCazuela" />
+
+    <EditText
+        android:id="@+id/cantCazuela"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:ems="2"
+        android:hint="2"
+        android:inputType="number"
+        app:layout_constraintStart_toEndOf="@+id/tvCantCazuela"
+        app:layout_constraintTop_toBottomOf="@+id/tvCazuela" />
+
+    <TextView
+        android:id="@+id/totalCazuela"
+        android:layout_width="53dp"
+        android:layout_height="28dp"
+        android:layout_marginStart="11dp"
+        android:hint="20000"
+        app:layout_constraintStart_toEndOf="@+id/imgCazuela"
+        app:layout_constraintTop_toBottomOf="@+id/cantCazuela" />
+
+    <TextView
+        android:id="@+id/tvChoclo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="50dp"
+        android:text="Pastel de Choclo"
+        app:layout_constraintStart_toEndOf="@+id/imgChoclo"
+        app:layout_constraintTop_toBottomOf="@+id/totalCazuela" />
+
+    <TextView
+        android:id="@+id/tvCantChoclo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="13dp"
+        android:layout_marginTop="13dp"
+        android:text="Cant."
+        app:layout_constraintStart_toEndOf="@+id/imgChoclo"
+        app:layout_constraintTop_toBottomOf="@+id/tvChoclo" />
+
+    <EditText
+        android:id="@+id/cantChoclo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13dp"
+        android:ems="2"
+        android:hint="3"
+        android:inputType="number"
+        app:layout_constraintStart_toEndOf="@+id/tvCantChoclo"
+        app:layout_constraintTop_toBottomOf="@+id/tvChoclo" />
+
+    <TextView
+        android:id="@+id/totalChoclo"
+        android:layout_width="53dp"
+        android:layout_height="28dp"
+        android:layout_marginStart="11dp"
+        android:hint="36000"
+        app:layout_constraintStart_toEndOf="@+id/imgChoclo"
+        app:layout_constraintTop_toBottomOf="@+id/cantChoclo" />
+
+    <TextView
+        android:id="@+id/tvSubTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="90dp"
+        android:layout_marginTop="99dp"
+        android:text="Subtotal: "
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgChoclo" />
+
+    <TextView
+        android:id="@+id/subtotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="37dp"
+        android:layout_marginTop="79dp"
+        android:hint="56000"
+        app:layout_constraintStart_toEndOf="@+id/tvSubTotal"
+        app:layout_constraintTop_toBottomOf="@+id/totalChoclo" />
+
+    <Switch
+        android:id="@+id/switchPropina"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toEndOf="@+id/tvPropina"
+        app:layout_constraintTop_toBottomOf="@+id/subtotal" />
+
+    <TextView
+        android:id="@+id/tvPropina"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="92dp"
+        android:layout_marginTop="8dp"
+        android:text="Propina: "
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvSubTotal" />
+
+    <TextView
+        android:id="@+id/tvTotalTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="109dp"
+        android:layout_marginTop="28dp"
+        android:text="Total: "
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvPropina" />
+
+    <TextView
+        android:id="@+id/Total"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="20dp"
+        android:hint="56000"
+        app:layout_constraintStart_toEndOf="@+id/tvTotalTotal"
+        app:layout_constraintTop_toBottomOf="@+id/switchPropina" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
